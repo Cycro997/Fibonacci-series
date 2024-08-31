@@ -3,15 +3,15 @@ use super::calc;
 #[derive(Debug)]
 pub struct Fibonacci{
     index: usize,
-    value: usize,
+    value: u128,
 }
 impl Fibonacci{
     pub fn new(index: usize) -> Self{
-        let value: usize = calc::calculate(index);
+        let value: u128 = calc::calculate(index);
 
         return Self{index: index, value: value};
     }
-    pub fn get_value(&self) -> usize{
+    pub fn get_value(&self) -> u128{
         return self.value;
     }
     pub fn get_index(&self) -> usize{
